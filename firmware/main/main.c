@@ -155,19 +155,26 @@ void set_tool(uint8_t *active_tool, uint8_t tool_number)
             *active_tool = TOOLS_DISABLED;
             return;
         case TOOL_1:
-            gpio_set_level(SENSOR_RELAIS, RELAIS_ENABLED);
+            // gpio_set_level(SENSOR_RELAIS, RELAIS_ENABLED); // uncomment this line for activation of sensor relais for TOOL_1
+            // to recognize as C245 soldering irons --> bridges Pin 5 and Pin 6 for "JBC Main in"
             gpio_set_level(TOOL1_RELAIS, RELAIS_ENABLED);
             gpio_set_level(TOOL1_LED, LED_ENABLED);
             break;
         case TOOL_2:
+            // gpio_set_level(SENSOR_RELAIS, RELAIS_ENABLED); // uncomment this line for activation of sensor relais for TOOL_2
+            // to recognize as C245 soldering irons --> bridges Pin 5 and Pin 6 for "JBC Main in"
             gpio_set_level(TOOL2_RELAIS, RELAIS_ENABLED);
             gpio_set_level(TOOL2_LED, LED_ENABLED);
             break;
         case TOOL_3:
+            // gpio_set_level(SENSOR_RELAIS, RELAIS_ENABLED); // uncomment this line for activation of sensor relais for TOOL_3
+            // to recognize as C245 soldering irons --> bridges Pin 5 and Pin 6 for "JBC Main in"
             gpio_set_level(TOOL3_RELAIS, RELAIS_ENABLED);
             gpio_set_level(TOOL3_LED, LED_ENABLED);
             break;
         case TOOL_4:
+            // gpio_set_level(SENSOR_RELAIS, RELAIS_ENABLED); // uncomment line this for activation of sensor relais for TOOL_4
+            // to recognize as C245 soldering irons --> bridges Pin 5 and Pin 6 for "JBC Main in"
             gpio_set_level(TOOL4_RELAIS, RELAIS_ENABLED);
             gpio_set_level(TOOL4_LED, LED_ENABLED);
             break;
